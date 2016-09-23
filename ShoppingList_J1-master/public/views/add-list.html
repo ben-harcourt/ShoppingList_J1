@@ -1,0 +1,116 @@
+<div class="container-fluid">
+	<div class="col-sm-8 col-md-6 card-new-list">
+		
+		<h1>CREATE A NEW LIST</h1>
+
+		<form ng-submit="addList(newList)">
+
+			<label>Name</label>
+			<br>
+			<input type="text" class="input-box-text" placeholder="Add name" ng-model="newList.name" required>
+			<br><br>
+			<label>Color</label>
+			<br>
+
+<!-- RADIO BUTTONS?! -->
+
+			<label class="red">
+			  <input type="radio" name="color" value="C0392B" ng-model="newList.color">
+			  <div class="layer"></div>
+			  <div class="button"><span></span></div>
+			</label>
+
+			<label class="salmon">
+			  <input type="radio" name="color" value="E74C3C" ng-model="newList.color">
+			  <div class="layer"></div>
+			  <div class="button"><span></span></div>
+			</label>
+
+
+
+			<label class="yellow">
+			  <input type="radio" name="color" value="F5D76E" ng-model="newList.color">
+			  <div class="layer"></div>
+			  <div class="button"><span></span></div>
+			</label>
+
+
+			</label>
+			<label class="lime">
+			  <input type="radio" name="color" value="7CB342" ng-model="newList.color">
+			  <div class="layer"></div>
+			  <div class="button"><span></span></div>
+			</label>
+
+			<label class="teal">
+			  <input type="radio" name="color" value="00897B" ng-model="newList.color">
+			  <div class="layer"></div>
+			  <div class="button"><span></span></div>
+			</label>
+  
+			  <label class="blue">
+			  <input type="radio" name="color" value="1E8BC3"ng-model="newList.color">
+			  <div class="layer"></div>
+			  <div class="button"><span></span></div>
+			</label>
+			<br>
+
+<!-- HEX CODE INPUT -->
+
+			<input type="text" minlength="6" maxlength="6" pattern="[A-Fa-f0-9]{6}" class="input-box-text" placeholder="Hex Value: 0-9, A-F" ng-model="newList.color" required>
+			<br>
+			<!-- <select ng-model="newList.color">
+				<option value="333333"><span></span></option>
+			</select> -->
+			<br>
+			<button type="submit" class="btn btn-lg">CREATE</button>
+
+		</form>
+	</div>
+</div>
+			
+
+<!--
+		<form> 
+
+		<div class="row">
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label> 
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label> 
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label>
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label>
+		</div>
+
+		<div class="row">					
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label> 
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label> 
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label>
+			<label class="radio-inline"><input type="radio" name="color" value="color"></label>
+		</div>
+
+						<br>
+
+		<div class="row">	
+			<label class="radio-inline"><input type="radio" name="color" value="color"><input type="text" name="hex-value" maxlength="7" value="#">
+		</div>
+
+						</label>
+					
+		</form>
+					
+
+			<input type="color" id="new-list-color" ng-model="newList.color" required>
+						<form>
+						  
+
+					</select>
+
+			
+
+			
+			</form>
+
+	</div>
+
+</div>
+
+-->

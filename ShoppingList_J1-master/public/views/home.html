@@ -1,0 +1,22 @@
+<div class="container-fluid">
+
+	<div class="row">
+			
+			<a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" href="#/add-list">
+				<div class="card-add">
+					<h1>CLICK TO ADD A NEW LIST</h1>
+					<br>
+					<span class="fa fa-plus fa-3x">   </span>	
+				</div>
+			</a>
+
+			<a class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="list in lists" ng-href="#/shopping-list/{{list.id}}">
+				<div class="card" style="border-color: {{list.color}}">	
+					<h3 style="color:{{list.color}}">{{list.name}}</h3>
+					<ul class="list-group">
+						<li style="color:{{list.color}}" class="list-group-item" ng-repeat="item in list.items | limitTo:8">{{item.name}}</li>
+					</ul>
+				</div>
+			</a>
+	</div>
+</div>

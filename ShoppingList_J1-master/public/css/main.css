@@ -1,0 +1,11 @@
+
+#list {
+	height: 100%;
+	border: 1px solid black;
+	overflow: auto;
+}
+
+#sidebar {
+	height: 100%;
+	background-color: black;
+}

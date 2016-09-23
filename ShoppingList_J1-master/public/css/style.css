@@ -1,0 +1,421 @@
+
+html {
+	font-family: 'Rubik', sans-serif;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	/*color:white;*/
+	background-color: #EBEBEB;
+	height:100%;
+    width:100%;
+    position:relative;
+    margin:0;
+    padding:0;
+}
+.table { border-collapse:collapse }
+
+a:hover {
+	text-decoration:none;
+}
+
+.navbar {
+	background-color: #353A47;
+	border-style: none;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #CCC;
+}
+
+.card {
+	background-color: #EBEBEB;
+	height: 450px;
+	/*width:450px;*/
+	width: 100%;
+	margin: 10px 0;
+	padding: 20px;
+	border-radius: 20px;
+	border-width: 5px;
+	border-style: solid; 
+	border-color: #F25757;
+
+}
+
+.card-add{
+	background-color: #7ADFBB;
+	color:white;
+	height: 450px;
+	/*width:450px;*/
+	width: 100%;
+	margin: 10px 0;
+	padding: 25px;
+	border-radius: 20px;
+	text-align: center;
+
+}
+
+.card-new-list{
+
+	background-color: #7ADFBB;
+	color:white;
+	height: 400px;
+	padding:30px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.card h1, h2, h3, h4, h5 {
+	text-transform: uppercase;
+}
+
+.card li {
+	background-color: #EBEBEB;
+	border: none;
+}
+
+.card h3 {
+	padding: 0px;
+	margin: 10px;
+}
+
+.input-box-text{
+	color:#353A47;
+}
+
+
+
+.shopping-list-card{
+	background-color: #EBEBEB;
+	/*height: 500px;*/
+	width: 100%;
+	margin: 10px;
+	border-radius: 20px;
+	border-width: 10px;
+	border-style: solid; 
+	/*border-color: #F25757;*/
+	padding-bottom: 10px;
+}
+
+
+
+.shopping-list-card li{
+	color: #F25757;
+	background-color: #EBEBEB;
+	border: none;
+}
+
+
+.list-head {
+	width: 100%;
+	padding: 20px;
+	/*background-color: #F25757;*/
+	border-color: #F25757;;
+	color: white;
+
+
+}
+/*.list-head row {
+	width: 100%;
+	background-color: #F25757;
+	border-color: #F25757;;
+	color: white;
+	margin:5px;
+
+
+}*/
+.list-head h1{
+	display: inline;
+}
+
+
+.list-group{
+	font-size: 16px;
+	margin-left: 5%;
+}
+
+.list-group-control{
+	max-height: 100%;
+    overflow-y: scroll; 
+    padding-top: 100px;
+	
+}
+
+.shopping-list-card li {
+/*	margin-left: 0px;*/
+	padding-left: 0px;
+}
+
+/*.shopping-list-card ul {
+	margin-top: 0px;
+	padding-top: 0px;
+}*/
+
+small {
+	margin-left: 20px;
+}
+
+.add-item {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+
+
+/*RADIO BUTTONS!*/
+
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button span {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: #eeeeee;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: ease .3s;
+}
+
+.button span:hover {
+  padding: 10px;
+}
+
+.red .button span {
+  background: #C0392B;
+}
+
+.salmon .button span {
+  background: #E74C3C;
+}
+
+.yellow .button span{
+  background: #F5D76E;
+}
+.lime .button span {
+  background: #8BC34A;
+}
+
+.teal .button span {
+  background: #009688;
+}
+
+.blue .button span {
+  background: #1E8BC3;
+}
+
+.indigo .button span {
+  background: #3F51B5;
+}
+
+/*.layer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: -1;
+}
+
+.red input:checked ~ .card-new-list{
+
+	background-color:#C0392B}
+
+.salmon input:checked ~ .layer {
+  background: #E74C3C;
+}
+
+.yellow input:checked ~ .layer {
+  background: #F5D76E
+}
+.lime input:checked ~ .layer {
+  background: #7CB342;
+}
+
+.teal input:checked ~ .layer {
+  background: #00897B;
+}
+
+.blue input:checked ~ .layer {
+  background: #1E8BC3;
+}*/
+
+input[type=text] {
+    border: 2px #353A47;
+    border-radius: 4px;
+}
+
+input[type~="radio"] {
+    display:none;
+}
+
+#trash {
+	cursor: pointer;
+}
+
+i {
+	cursor: pointer;	
+}
+
+.btn-custom {
+	background-color: #353A47;
+	color: white;
+	margin-left: 5%;
+}
+
+.btn-add {
+	background-color: #353A47;
+	color: white;
+	margin-left: 0px;
+}
+
+.btn-home {
+	background-color: #E26A6A;
+	color: white;
+	margin-left: 5%;
+}
+
+.close-box {
+	cursor: pointer;
+}
+/*New OrderBy table*/
+.order-by-table{
+
+	/*margin: 40px;*/
+	margin-left: 5%;
+	margin-bottom: 10px;
+	/*padding: 30px;*/
+}
+
+
+.btn-order-by-name {
+	background-color: #353A47;
+	color: white;
+	font-size: 14px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	margin-right: -2px;
+	margin-left: 10px;
+	border-style: none;
+}
+.btn-order-by-priority{
+background-color:#E26A6A;
+	color: white;
+	font-size: 14px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-style: none;
+	}
+	/*Icon for search bar*/
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+
+
+
+.icon-addon {
+    position: relative;
+    color: #555;
+    display: block;
+}
+
+.icon-addon:after,
+.icon-addon:before {
+    display: table;
+    content: " ";
+}
+
+.icon-addon:after {
+    clear: both;
+}
+
+.icon-addon.addon-md .glyphicon,
+.icon-addon .glyphicon, 
+.icon-addon.addon-md .fa,
+.icon-addon .fa {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    font-size: 14px;
+    width: 20px;
+    margin-left: -2.5px;
+    text-align: center;
+    padding: 10px 0;
+    top: 1px
+}
+
+.icon-addon.addon-lg .form-control {
+    line-height: 1.33;
+    height: 46px;
+    font-size: 18px;
+    padding: 10px 16px 10px 40px;
+}
+
+.icon-addon.addon-sm .form-control {
+    height: 30px;
+    padding: 5px 10px 5px 28px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.icon-addon.addon-lg .fa,
+.icon-addon.addon-lg .glyphicon {
+    font-size: 18px;
+    margin-left: 0;
+    left: 11px;
+    top: 4px;
+}
+
+.icon-addon.addon-md .form-control,
+.icon-addon .form-control {
+    padding-left: 30px;
+    float: left;
+    font-weight: normal;
+}
+
+.icon-addon.addon-sm .fa,
+.icon-addon.addon-sm .glyphicon {
+    margin-left: 0;
+    font-size: 12px;
+    left: 5px;
+    top: -1px
+}
+
+.icon-addon .form-control:focus + .glyphicon,
+.icon-addon:hover .glyphicon,
+.icon-addon .form-control:focus + .fa,
+.icon-addon:hover .fa {
+    color: #2580db;
+}
+
+/*End of Icon for Search Bar*/
+
+.title {
+	margin-bottom: 10px;
+}

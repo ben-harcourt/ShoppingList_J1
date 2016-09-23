@@ -1,0 +1,99 @@
+<div class="container">
+  
+<!-- <div class="row"> -->
+    <div class="shopping-list-card" style="border-color:{{list.color}}">
+            <div class="col-sm-8 list-head" style="background-color:{{list.color}}">
+                <div class="row">
+                    <div class="col-sm-6 title">
+                        <h1>{{list.name}}</h1>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <div class="icon-addon addon-md">
+                                <input type="text" placeholder="search items" class="form-control" id="search-text" ng-model="search">
+                                <label for="search-text" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <i id="trash" class="fa fa-trash fa-3x"  ng-click="removeList(list)" alt="Delete List"></i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <i class="fa fa-times-circle-o fa-2x" ng-click="clearCheckedItems()" id="clear" alt="Clear Checked Items"></i>
+                        <span>clear checked items</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <i class="fa fa-times-circle fa-2x" ng-click="clearItems()" id="clear" alt="Clear Checked Items"></i>
+                        <span>clear all items</span>    
+                    </div>
+                </div>
+                    
+            </div>
+
+
+        <div id="list-section">
+            <table class="order-by-table">
+                <tr><th><h5>order items by:</h5></th>
+                    <th>
+                        <button class="btn-order-by-name" ng-click="sortBy('name')"><i class="fa fa-sort" aria-hidden="true"></i>Name</button>
+                        <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th>
+                        <button class="btn-order-by-priority" ng-click="sortBy('priority')"><i class="fa fa-sort" aria-hidden="true"></i>Priority</button>
+                        <span class="sortorder" ng-show="propertyName === 'priority'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                </tr>
+            </table>
+
+            <ul class="list-group">
+                <li style="color:{{list.color}}" class="list-group-item" ng-repeat="item in list.items | orderBy:propertyName:reverse | filter: search ">
+                    <input type="checkbox" ng-model="item.isChecked" ng-click="editItem()">
+                    {{item.name}} - {{item.priority}}
+                    <i class="fa fa-trash-o" aria-hidden="true" ng-click="removeItem(item)"></i>&nbsp
+                    
+                    <i class="fa fa-pencil" aria-hidden="true" href ng-click="showEdit = !showEdit" ng-show="!showEdit"></i><br>
+                    <small class="form-text text-muted">Note: {{item.note}}</small>
+                    <div ng-show = "showEdit"> 
+                        <h4>Edit {{item.name}}</h4>
+                        <form ng-submit="editItem()">
+                            <input class="form-control" type="text" name="name" id="name" ng-model="item.name" maxlength="25" required>
+                            <select class="form-control" name="priority" id="priority" ng-model="item.priority" required>
+                                <option value="">Priority</option>
+                                <option value="High">High</option>
+                                <option value="Low">Low</option>
+                            </select>
+                            <input type="text" class="form-control" name="note" id="note" ng-model="item.note" maxlength="255" value= " ">
+                            <button class="btn btn-default" type="submit" ng-click="showEdit = !showEdit">Update</button>
+                        </form>
+                    </div>
+                    <br>
+
+                </li> 
+            </ul>
+
+            <button class="btn btn-default btn-custom" href ng-click="showAddItem = !showAddItem" ng-show="!showAddItem">Add Item</button>
+            <div ng-show="showAddItem" class="add-item">
+                <h4>Add Item</h4>
+                <form ng-submit="addItem()">
+                    <input class="form-control" type="text" name="name" id="name" ng-model="newItem.name" placeholder="Item" maxlength="25" required>
+                    <select class="form-control" name="priority" id="priority" ng-model="newItem.priority" required>
+                        <option value="">Priority</option>
+                        <option value="High">High</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <input type="text" class="form-control" name="note" id="note" ng-model="newItem.note" placeholder="Note" maxlength="255" value= " ">
+                    <button class="btn btn-default btn-add" type="submit">Add</button>&nbsp<span class="close-box" ng-click="showAddItem = !showAddItem"><u>close</u></span>    
+                </form>
+                 <!-- <button class="btn btn-default btn-lg btn-custom" href="">Add Item</button> -->
+            </div><br><br>
+            <a ng-href="#/home"><button class="btn btn-default btn-lg btn-home">Save & Return</button></a>
+
+        </div>
+    </div>
+
+    <!-- </div> -->
+</div>
