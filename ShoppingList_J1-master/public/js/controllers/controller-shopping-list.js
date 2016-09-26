@@ -5,6 +5,18 @@
 
 	app.controller('ShoppingListController', ['$scope', '$http', '$routeParams', 'API_BASE', '$location', function($scope, $http, $routeParams, API_BASE, $location){
 		
+		//UPLOAD IMAGE TO LIST
+		// $scope.onUploadSelect=function($files){
+		// 	$scope.newResource.newUploadName=$files[0].name;
+		// };
+		// $http
+		// 	.post('/api/uploads',{
+		// 		uploadName: newResource.newUploadName,
+		// 		upload: newResource.newUpload
+		// 	})
+		// 	.sucess(function(data){
+		// 		newResource.upload=data;
+		// 	});
 
 		// GET SPECIFIC LIST
 		$scope.list = [];
