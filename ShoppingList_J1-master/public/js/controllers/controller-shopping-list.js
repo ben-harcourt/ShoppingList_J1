@@ -5,18 +5,7 @@
 
 	app.controller('ShoppingListController', ['$scope', '$http', '$routeParams', 'API_BASE', '$location', function($scope, $http, $routeParams, API_BASE, $location){
 		
-		//UPLOAD IMAGE TO LIST
-		// $scope.onUploadSelect=function($files){
-		// 	$scope.newResource.newUploadName=$files[0].name;
-		// };
-		// $http
-		// 	.post('/api/uploads',{
-		// 		uploadName: newResource.newUploadName,
-		// 		upload: newResource.newUpload
-		// 	})
-		// 	.sucess(function(data){
-		// 		newResource.upload=data;
-		// 	});
+
 
 		// GET SPECIFIC LIST
 		$scope.list = [];
@@ -74,10 +63,11 @@
 				name : $scope.newItem.name,
 				priority : $scope.newItem.priority,
 				note: $scope.newItem.note,
+				img: $scope.newItem.img,
 				isChecked: false,
 				listId: $scope.list.id,
 				created: created,
-				id: newID
+				id: newID,
 			});
 			// console.log($scope.list.items);
 			$http.put(API_BASE + 'shopping-lists/', $scope.list)
@@ -90,7 +80,8 @@
 	        $scope.newItem = {
 	        	name: "",
 	        	priority: "",
-	        	note: ""
+	        	note: "",
+	        	img:""
 	        };    
 		};
 
