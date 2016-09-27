@@ -100,6 +100,7 @@ router.put('/', function (req, res){
 	{
 		id: list.id,
 		name: list.name,
+		image: list.image,
 		color: list.color,
 		items: list.items,
 		created: list.created

@@ -62,13 +62,12 @@
 				name : $scope.newItem.name,
 				priority : $scope.newItem.priority,
 				note: $scope.newItem.note,
-				image: $scope.newItem.img, //onUploadSelect($files)
+				image: $scope.newItem.image, //{data: Buffer, contentType: String}, //onUploadSelect($files)
 				isChecked: false,
 				listId: $scope.list.id,
 				created: created,
 				id: newID,
 			});
-			//Upload image to db
 
 
 			// console.log($scope.list.items);
@@ -147,5 +146,55 @@
 		};
 
 	}]);
+
+	// //Store image to Database
+	// var server = app;
+	// var mongoose=require('mongoose');
+	// var imgPath=('../../mongoUtil.js');
+	// var A = mongoose.model('A', schema);
+
+	// mongoose.connection.on('open',function(){
+	// 	console.error('mongo is open');
+
+	// 	A.remove(function(err){
+	// 		if(err) throw err;
+	// 		console.error('removed old docs');
+
+	// 		var a = new A;
+	// 		a.img.data=fs.readFileSync(imgPath);
+	// 		a.img.contentType='image/png||image/jpg';
+	// 		a.save(function(err,a){
+	// 			if (err) throw err;
+
+	// 			console.error('save img to mongo');
+
+	// 			var server = express.createServer();
+	// 			server.get('/', function(req, res, next){
+	// 				A.findById(a, function (err, doc){
+	// 					if(err) return next(err);
+	// 					res.contentType(doc.img.contentType);
+	// 					res.send(doc.img.data);
+	// 				});
+	// 			});
+
+	// 			server.on('close', function(){
+	// 				console.error('dropping db');
+	// 				mongoose.connection.db.dropDatabase(function(){
+	// 					console.error('closing db connection');
+	// 					mongoose.connection.close();
+	// 				});
+	// 			});
+
+	// 			server.listen(5000, function(err){
+	// 				var address=server.address();
+	// 			});
+
+	// 			process.on('SIGINT', function(){
+	// 				server.close();
+	// 			});
+
+	// 		});
+	// 	});
+	//});
 
 }());
