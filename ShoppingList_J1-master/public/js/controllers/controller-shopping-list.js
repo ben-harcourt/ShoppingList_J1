@@ -4,7 +4,6 @@
     var app = angular.module('myApp');
 
 	app.controller('ShoppingListController', ['$scope', '$http', '$routeParams', 'API_BASE', '$location', function($scope, $http, $routeParams, API_BASE, $location){
-		
 
 
 		// GET SPECIFIC LIST
@@ -63,12 +62,15 @@
 				name : $scope.newItem.name,
 				priority : $scope.newItem.priority,
 				note: $scope.newItem.note,
-				img: $scope.newItem.img,
+				image: $scope.newItem.img, //onUploadSelect($files)
 				isChecked: false,
 				listId: $scope.list.id,
 				created: created,
 				id: newID,
 			});
+			//Upload image to db
+
+
 			// console.log($scope.list.items);
 			$http.put(API_BASE + 'shopping-lists/', $scope.list)
 				.success(function (data, status, headers, config) {
@@ -81,7 +83,7 @@
 	        	name: "",
 	        	priority: "",
 	        	note: "",
-	        	img:""
+	        	image:""
 	        };    
 		};
 

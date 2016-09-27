@@ -88,8 +88,8 @@
                         <option value="Low">Low</option>
                     </select>
                     <input type="text" class="form-control" name="note" id="note" ng-model="newItem.note" placeholder="Note" maxlength="255" value= " ">
-                    <label>Upload Image</label>
-                            <input type="file" ng-file-select="onUploadSelect($files)" ng-model="newResource.newUpload" id="img">
+                <label>Upload Image</label>
+                    <input class="form-control" type="file" ng-file-select="onUploadSelect($files)" ng-model="newItem.img" name="image" id="image">
                     <button class="btn btn-default btn-add" type="submit">Add</button>&nbsp<span class="close-box" ng-click="showAddItem = !showAddItem"><u>close</u></span>    
                 </form>
                  <!-- <button class="btn btn-default btn-lg btn-custom" href="">Add Item</button> -->
