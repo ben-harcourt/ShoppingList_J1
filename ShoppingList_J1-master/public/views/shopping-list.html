@@ -68,7 +68,7 @@
                             </select>
                             <input type="text" class="form-control" name="note" id="note" ng-model="item.note" maxlength="255" value= " ">
                             <label>Upload Image</label>
-                            <input type="file" ng-file-select="onUploadSelect($files)" ng-model="newResource.newUpload">
+                            <input type="file" ng-file-select="onUploadSelect($files)" ng-model="item.image" name="image" id="image">
                             <button class="btn btn-default" type="submit" ng-click="showEdit = !showEdit">Update</button>
                         </form>
                     </div>

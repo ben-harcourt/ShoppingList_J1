@@ -62,7 +62,7 @@
 				name : $scope.newItem.name,
 				priority : $scope.newItem.priority,
 				note: $scope.newItem.note,
-				image: $scope.newItem.image, //{data: Buffer, contentType: String}, //onUploadSelect($files)
+				image: $scope.newItem.image,//{data: Buffer, contentType: file}, //onUploadSelect($files)
 				isChecked: false,
 				listId: $scope.list.id,
 				created: created,
@@ -70,7 +70,8 @@
 			});
 
 
-			// console.log($scope.list.items);
+			
+			console.log($scope.list.items);
 			$http.put(API_BASE + 'shopping-lists/', $scope.list)
 				.success(function (data, status, headers, config) {
 	            })
