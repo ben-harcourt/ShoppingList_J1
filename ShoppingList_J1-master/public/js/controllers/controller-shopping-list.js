@@ -62,7 +62,7 @@
 				name : $scope.newItem.name,
 				priority : $scope.newItem.priority,
 				note: $scope.newItem.note,
-				image: $scope.newItem.image,//{data: Buffer, contentType: file}, //onUploadSelect($files)
+				img: $scope.newItem.img,//{data: Buffer, contentType: file}, //onUploadSelect($files)
 				isChecked: false,
 				listId: $scope.list.id,
 				created: created,
@@ -83,7 +83,7 @@
 	        	name: "",
 	        	priority: "",
 	        	note: "",
-	        	image:""
+	        	img:""
 	        };    
 		};
 
