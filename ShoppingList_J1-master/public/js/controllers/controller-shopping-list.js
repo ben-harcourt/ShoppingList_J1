@@ -148,6 +148,40 @@
 
 	}]);
 
+	// Store image to "bucket"
+	// Create path to image folder on upload
+	(function(){
+		var imgPath = "../../img/";
+		var image = img.item;
+
+
+	}());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// //Store image to Database
 	// var server = app;
 	// var mongoose=require('mongoose');

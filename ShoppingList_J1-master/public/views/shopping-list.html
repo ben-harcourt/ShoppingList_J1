@@ -51,9 +51,9 @@
 
             <ul class="list-group">
                 <li style="color:{{list.color}}" class="list-group-item" ng-repeat="item in list.items | orderBy:propertyName:reverse | filter: search ">
-                    <input type="checkbox" ng-model="item.isChecked" ng-click="editItem()"><img class="itemImg" src="../img/shoppingbasket.jpg">
+                    <input type="checkbox" ng-model="item.isChecked" ng-click="editItem()"><!-- <img class="itemImg" ng-src="../img/shoppingbasket.jpg"> -->
                     <!--Create path for upload images to be saved to img.folder, able to upload and replace stock-->
-                    {{item.name}} - {{item.priority}}
+                    {{item.img}} {{item.name}} - {{item.priority}}
                     <i class="fa fa-trash-o" aria-hidden="true" ng-click="removeItem(item)"></i>&nbsp
                     
                     <i class="fa fa-pencil" aria-hidden="true" href ng-click="showEdit = !showEdit" ng-show="!showEdit"></i><br>
@@ -69,7 +69,7 @@
                             </select>
                             <input type="text" class="form-control" name="note" id="note" ng-model="item.note" maxlength="255" value= " ">
                             <label>Upload Image</label>
-                            <input type="file" ng-file-select="onUploadSelect($files)" ng-model="item.image" name="image" id="image" ng-src="{{item.image}}">
+                            <input type="file" ng-file-select="onUploadSelect($files)" ng-model="item.image" name="image" id="img" ng-src="{{item.img}}">
                             <button class="btn btn-default" type="submit" ng-click="showEdit = !showEdit">Update</button>
                         </form>
                     </div>
