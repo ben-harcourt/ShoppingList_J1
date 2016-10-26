@@ -152,8 +152,8 @@
 	// Create path to image folder on upload
 	(function(){
 		var imgPath = "../../img/";
-		var image = img.item;
-
+		var img = $scope.newItem.image;
+		$('#image').onUploadSelect($files);
 
 	}());
 
