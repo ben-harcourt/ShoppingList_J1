@@ -53,7 +53,7 @@
                 <li style="color:{{list.color}}" class="list-group-item" ng-repeat="item in list.items | orderBy:propertyName:reverse | filter: search ">
                     <input type="checkbox" ng-model="item.isChecked" ng-click="editItem()"><!-- <img class="itemImg" ng-src="../img/shoppingbasket.jpg"> -->
                     <!--Create path for upload images to be saved to img.folder, able to upload and replace stock-->
-                    {{item.img}} {{item.name}} - {{item.priority}}
+                    <img src="{{item.img}} || ../img/shoppingbasket.jpg"> {{item.name}} - {{item.priority}}
                     <i class="fa fa-trash-o" aria-hidden="true" ng-click="removeItem(item)"></i>&nbsp
                     
                     <i class="fa fa-pencil" aria-hidden="true" href ng-click="showEdit = !showEdit" ng-show="!showEdit"></i><br>
