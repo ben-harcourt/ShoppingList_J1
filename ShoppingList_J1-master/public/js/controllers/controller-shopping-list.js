@@ -150,12 +150,12 @@
 
 	// Store image to "bucket"
 	// Create path to image folder on upload
-	(function(){
-		var imgPath = "../../img/";
-		var img = $scope.newItem.image;
-		$('#image').onUploadSelect($files);
+	// (function(){
+	// 	var imgPath = "../../img/";
+	// 	var img = $scope.newItem.image;
+	// 	$('#image').onUploadSelect($files);
 
-	}());
+	// }());
 
 
 
